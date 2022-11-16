@@ -10,4 +10,4 @@ relative_links:
 include:
   - README.md
 github:
-  is\_project\_page: false
+  is_project_page: false
