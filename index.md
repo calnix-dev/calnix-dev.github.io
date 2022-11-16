@@ -10,6 +10,6 @@ This is my Github page. There are many like it, but this one is mine.
 
 You appear to be lost.
 
-# Is there anything interesting here I can look around for?
+# Is there anything interesting here?
 
 Nope.
