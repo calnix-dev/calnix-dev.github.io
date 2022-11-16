@@ -1,0 +1,13 @@
+theme: jekyll-theme-minimal
+title: calnix-dev
+description: Queries? Ping post [at] calnix [dot] dev.
+plugins:
+  - jekyll-relative-links
+  - jemoji
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+github:
+  is\_project\_page: false
