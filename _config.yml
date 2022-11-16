@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
-title: calnix-dev
+title: Calnix
 description: Queries? Ping post [at] calnix [dot] dev.
 plugins:
   - jekyll-relative-links
