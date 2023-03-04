@@ -1,5 +1,6 @@
 theme: jekyll-theme-minimal
 title: Calnix
+logo: /assets/img/calnix.png
 description: Queries? Ping post [at] calnix [dot] dev.
 plugins:
   - jekyll-relative-links
