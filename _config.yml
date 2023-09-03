@@ -1,15 +1,35 @@
 theme: jekyll-theme-minimal
 title: Calnix
-logo: /assets/img/calnix.png
+logo: /assets/calnix.png
 description: Queries? Ping post [at] calnix [dot] dev.
+baseurl: "" 
+url: "https://calnix.dev"
 plugins:
   - jekyll-relative-links
   - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap
+whitelist:
+  - jekyll-sitemap
 relative_links:
   enabled: true
   collections: true
-include:
+exclude:
   - README.md
 github:
   is_project_page: false
   is_user_page: false
+
+json:
+  name: Calnix
+  description:
+    - Greetings!
+    - You appear to be lost...
+    - Do you need help?
+  contact:
+    email: post[at]calnix[dot]dev
+    
+sass:
+  sass_dir: _sass
+  style: compressed
+  sourcemap: never
