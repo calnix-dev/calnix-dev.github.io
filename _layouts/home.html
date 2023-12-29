@@ -21,7 +21,7 @@ layout: default
     <p><span class="list-key">message</span></p>
     <div id="typed-strings">
       {% for msg in site.json.message.content %}
-       <p><span class="list-subkey">content</span><span class="list-attr">{{ msg | prepend: '"' | append: '",'}}</span></p>
+       <p><span class="list-attr">{{ msg | prepend: '"' | append: '",'}}</span></p>
       {% endfor %}
     </div>
     <p><span class="key">message</span>{% include typed.html %}</p>
