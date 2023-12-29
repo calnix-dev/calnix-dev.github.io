@@ -20,11 +20,11 @@ layout: default
     {% if site.json.message.first %}
     <p><span class="list-key">message</span></p>
     <div id="typed-strings">
-      {% for i in site.json.message %}
-      <p><span class="list-subkey">{{ i | slice: 0 }}</span><span class="list-attr">{{ i | slice: 1 }}</span></p>
+      {% for msg in site.json.message.content %}
+       <p><span class="list-subkey">content</span><span class="list-attr">{{ msg | prepend: '"' | append: '",'}}</span></p>
       {% endfor %}
     </div>
-    <p><span class="list-key">message</span>{% include typed.html %}</p>
+    <p><span class="key">message</span>{% include typed.html %}</p>
     {% else %}
     <p><span class="key">message</span><span class="attr">{{ site.json.message }}</span></p>
     {% endif %}
