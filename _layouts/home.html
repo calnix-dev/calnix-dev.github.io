@@ -14,26 +14,23 @@ layout: default
     <p><span class="key">description</span><span class="attr">{{ site.json.description }}</span></p>
     {% endif %}
   </div>
-  
+
   <div class="block">
     {% if site.json.message %}
-      {% if site.json.message.first %}
-        <div id="typed-strings">
-          {% for msg in site.json.message %}
-            <span>{{ msg | prepend: '"' | append: '",'}}</span>
-          {% endfor %}
-        </div>
-        <p><span class="key">message</span>{% include typed.html %}</p>
-      {% else %}
-        {% for msg in site.json.message %}
-          <p><span class="key">message</span><span class="attr">{{ msg }}</span></p>
-        {% endfor %}
-      {% endif %}
+    {% if site.json.message.first %}
+    <p><span class="list-key">message</span></p>
+    <div id="typed-strings">
+      {% for msg in site.json.message %}
+        <span>{{ msg | prepend: '"' | append: '",'}}</span>
+      {% endfor %}
+    </div>
+    <p><span class="key">message</span>{% include typed.html %}</p>
     {% else %}
-      <p><span class="key">message</span><span class="attr">{{ site.message }}</span></p>
+    <p><span class="key">message</span><span class="attr">{{ site.json.message }}</span></p>
+    {% endif %}
     {% endif %}
   </div>
-
+  
   <div class="block">
     {% if site.json.cv %}
     {% assign cv = site.json.cv | split: "/" | slice: -1 %}
