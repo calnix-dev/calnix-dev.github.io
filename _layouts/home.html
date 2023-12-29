@@ -3,6 +3,7 @@ layout: default
 ---
 
 <main class="json">
+  
   <div class="block">
     {% if site.json.name %}
     <p><span class="key">name</span><span class="attr">{{ site.json.name }}</span></p>
@@ -13,29 +14,33 @@ layout: default
     <p><span class="key">description</span><span class="attr">{{ site.json.description }}</span></p>
     {% endif %}
   </div>
+  
   <div class="block">
     {% if site.json.message %}
       {% if site.json.message.first %}
-        <p><span class="list-key">message</span></p>
-        <div class="list">
-          {% for i in site.json.message %}
-            <p><span class="list-subkey">{{ i | slice: 0 }}</span><span class="list-attr">{{ i | slice: 1 }}</span></p>
+        <div id="typed-strings">
+          {% for msg in site.json.message %}
+            <span>{{ msg | prepend: '"' | append: '",'}}</span>
           {% endfor %}
         </div>
         <p><span class="key">message</span>{% include typed.html %}</p>
       {% else %}
-        <p><span class="key">message</span><span class="attr">{{ site.json.message }}</span></p>
+        {% for msg in site.json.message %}
+          <p><span class="key">message</span><span class="attr">{{ msg }}</span></p>
+        {% endfor %}
       {% endif %}
     {% else %}
       <p><span class="key">message</span><span class="attr">{{ site.message }}</span></p>
     {% endif %}
   </div>
+
   <div class="block">
     {% if site.json.cv %}
     {% assign cv = site.json.cv | split: "/" | slice: -1 %}
     <p><span class="key">cv</span><span class="attr"><a href="{{ site.json.cv }}" target="_blank">{{ cv }}</a></span></p>
     {% endif %}
   </div>
+  
   <div class="block">
     {% if site.json.address %}
     {% if site.json.address.first %}
@@ -50,6 +55,7 @@ layout: default
     {% endif %}
     {% endif %}
   </div>
+  
   <div class="block">
     {% if site.json.contact %}
     {% if site.json.contact.first %}
@@ -64,6 +70,7 @@ layout: default
     {% endif %}
     {% endif %}
   </div>
+  
   <div class="block">
     {% if site.json.demo %}
     {% assign demo = site.json.demo | split: "//" | slice: 1 %}
@@ -74,6 +81,7 @@ layout: default
     <p><span class="key">source</span><span class="attr"><a href="{{ site.json.source }}" target="_blank">{{ source }}</a></span></p>
     {% endif %}
   </div>
+  
   <div class="block">
     {% if site.json.profiles %}
     <span class="array-key">profiles</span>
@@ -84,4 +92,5 @@ layout: default
     </div>
     {% endif %}
   </div>
+  
 </main>
