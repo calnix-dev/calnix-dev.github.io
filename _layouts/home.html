@@ -14,14 +14,14 @@ layout: default
     <p><span class="key">description</span><span class="attr">{{ site.json.description }}</span></p>
     {% endif %}
   </div>
- 
+  
   <div class="block">
     {% if site.json.message %}
     {% if site.json.message.first %}
-    <p><span class="key">contact</span>
+    <p><span class="key">message</span></p>
     <div id="typed-strings">
       {% for msg in site.json.message.content %}
-      <span class="attr">{{ msg | prepend: '"' | append: '",'}}</span></p>
+      <p><span class="list-attr">{{ msg  }}</span></p>
       {% endfor %}
     </div>
     <p><span class="key">message</span>{% include typed.html %}</p>
