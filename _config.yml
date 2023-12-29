@@ -22,7 +22,10 @@ github:
 
 json:
   name: Calnix
-  description:
+  description: data potato
+  current status: employed
+
+  message: 	
     - Greetings!
     - You appear to be lost...
     - Do you need help?
