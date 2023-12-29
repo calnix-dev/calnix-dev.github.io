@@ -13,13 +13,16 @@ layout: default
     {% if site.json.description %}
     <p><span class="key">description</span><span class="attr">{{ site.json.description }}</span></p>
     {% endif %}
+    {% if site.json.status %}
+    <p><span class="key">status</span><span class="attr">{{ site.json.status }}</span></p>
+    {% endif %}
   </div>
   
   <div class="block">
     {% if site.json.message %}
     {% if site.json.message.first %}
     <div id="typed-strings">
-      {% for msg in site.json.message.content %}
+      {% for msg in site.json.message %}
       <p><span class="list-attr">{{ msg  }}</span></p>
       {% endfor %}
     </div>
