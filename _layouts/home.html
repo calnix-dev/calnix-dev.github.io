@@ -18,7 +18,6 @@ layout: default
   <div class="block">
     {% if site.json.message %}
     {% if site.json.message.first %}
-    <p><span class="key">message</span></p>
     <div id="typed-strings">
       {% for msg in site.json.message.content %}
       <p><span class="list-attr">{{ msg  }}</span></p>
