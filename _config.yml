@@ -26,9 +26,10 @@ json:
   current status: employed
 
   message: 	
-    - Greetings!
-    - You appear to be lost...
-    - Do you need help?
+   content: 
+      - Greetings!
+      - You appear to be lost...
+      - Do you need help?
   contact:
     email: post[at]calnix[dot]dev
     
